@@ -1,0 +1,1 @@
+Insert into DCSDBA.USER(USER_ID) VALUES ('P1C568A');
