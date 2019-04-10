@@ -36,9 +36,8 @@ public class JpaConfiguration {
         }
     }
 
-    @Bean
-    @Primary
-    public DataSource dataSource(@Named("actual") DataSource actualDataSource) {
+
+    private DataSource wrapWithLoggingProxy(DataSource actualDataSource) {
         // use pretty formatted query with multiline enabled
         PrettyQueryEntryCreator creator = new PrettyQueryEntryCreator();
         creator.setMultiline(true);
@@ -54,10 +53,11 @@ public class JpaConfiguration {
     }
 
     @Bean
-    @Named("actual")
+    //@Named("actual")
     @ConfigurationProperties(prefix = "spring.datasource.hikari")
     public DataSource getActualDataSource(DataSourceProperties properties) {
-        return properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+        HikariDataSource hikariDataSource = properties.initializeDataSourceBuilder().type(HikariDataSource.class).build();
+        return wrapWithLoggingProxy(hikariDataSource);
     }
 
     /*
