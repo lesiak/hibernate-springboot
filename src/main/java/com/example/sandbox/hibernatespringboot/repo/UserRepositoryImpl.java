@@ -1,9 +1,7 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.QUser;
 import com.example.sandbox.hibernatespringboot.model.common.User;
 import com.querydsl.core.types.Predicate;
-import com.querydsl.core.types.dsl.StringPath;
 import org.hibernate.MultiIdentifierLoadAccess;
 import org.hibernate.Session;
 
@@ -25,7 +23,9 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
 
     @Override
     public List<User> findQueryDsl(Predicate predicate) {
-        StringPath p = QUser.user.userId;
+      //  StringPath p = QUser.user.userId;
+        //Bar b;
+        //b.
        /* JPAQuery<?> query = new JPAQuery<Void>(em);
         List<MheLocation> resultList = query.select(mheLocation)
                 .from(mheLocation).innerJoin(mheLocation.location).fetchJoin()
