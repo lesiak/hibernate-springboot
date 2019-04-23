@@ -1,0 +1,2 @@
+
+Insert into ACTIVITY(ACTIVITYID, USERID, TYPE) VALUES ('ABC', 1, 'AAA');
