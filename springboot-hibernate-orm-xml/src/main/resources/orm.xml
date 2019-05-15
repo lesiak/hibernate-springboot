@@ -1,0 +1,23 @@
+<hibernate-mapping>
+    <class name="com.example.sandbox.springboothibernateormxml.model.orm.UniversityBasicInformation"
+           table="university_basic_information">
+        <composite-id>
+            <key-property name="aisheCode" type="java.lang.String">
+                <column name="aishe_code"/>
+            </key-property>
+            <key-property name="surveyYear" type="java.lang.Integer">
+                <column name="survey_year"/>
+            </key-property>
+        </composite-id>
+        <property name="state" type="java.lang.String">
+            <column name="state"/>
+        </property>
+        <property name="district" type="java.lang.String">
+            <column name="district"/>
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="type"/>
+        </property>
+    </class>
+
+</hibernate-mapping>
