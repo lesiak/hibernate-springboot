@@ -1,6 +1,6 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.User;
+import com.example.sandbox.hibernatespringboot.model.User;
 import com.querydsl.core.types.Predicate;
 import org.hibernate.MultiIdentifierLoadAccess;
 import org.hibernate.Session;

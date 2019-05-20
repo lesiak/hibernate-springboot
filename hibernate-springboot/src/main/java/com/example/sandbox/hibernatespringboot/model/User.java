@@ -1,4 +1,4 @@
-package com.example.sandbox.hibernatespringboot.model.common;
+package com.example.sandbox.hibernatespringboot.model;
 
 import com.example.sandbox.hibernatespringboot.model.converters.JobStatusConverter;
 import org.hibernate.annotations.DynamicUpdate;

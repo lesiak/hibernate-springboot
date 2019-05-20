@@ -1,8 +1,8 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.Projet;
-import com.example.sandbox.hibernatespringboot.model.common.QLocalisation;
-import com.example.sandbox.hibernatespringboot.model.common.QProjet;
+import com.example.sandbox.hibernatespringboot.model.Projet;
+import com.example.sandbox.hibernatespringboot.model.QLocalisation;
+import com.example.sandbox.hibernatespringboot.model.QProjet;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.JPAExpressions;
 import com.querydsl.jpa.impl.JPAQuery;

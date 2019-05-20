@@ -1,4 +1,4 @@
-package com.example.sandbox.hibernatespringboot.model.common.joinmanymany;
+package com.example.sandbox.hibernatespringboot.model.joinmanymany;
 
 import javax.persistence.*;
 @Entity(name = "foo1")

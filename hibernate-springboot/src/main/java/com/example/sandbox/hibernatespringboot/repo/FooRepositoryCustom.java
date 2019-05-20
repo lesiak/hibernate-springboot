@@ -1,8 +1,6 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.Foo;
-import com.example.sandbox.hibernatespringboot.model.common.User;
-import com.querydsl.core.types.Predicate;
+import com.example.sandbox.hibernatespringboot.model.Foo;
 
 import java.util.List;
 

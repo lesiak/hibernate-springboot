@@ -1,9 +1,6 @@
 package com.example.sandbox.hibernatespringboot.repo.mapsid;
 
 
-import com.example.sandbox.hibernatespringboot.model.common.joinmanymany.Foo1;
-import com.example.sandbox.hibernatespringboot.model.common.mapsid.Child;
-import com.example.sandbox.hibernatespringboot.model.common.mapsid.Parent;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

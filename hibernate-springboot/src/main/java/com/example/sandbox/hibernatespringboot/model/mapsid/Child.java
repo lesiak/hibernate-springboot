@@ -1,4 +1,4 @@
-package com.example.sandbox.hibernatespringboot.model.common.mapsid;
+package com.example.sandbox.hibernatespringboot.model.mapsid;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

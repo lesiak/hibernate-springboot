@@ -1,7 +1,7 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.Bar;
-import com.example.sandbox.hibernatespringboot.model.common.Foo;
+import com.example.sandbox.hibernatespringboot.model.Bar;
+import com.example.sandbox.hibernatespringboot.model.Foo;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

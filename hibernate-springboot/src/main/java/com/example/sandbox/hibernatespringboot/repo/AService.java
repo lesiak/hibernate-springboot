@@ -1,7 +1,7 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.CommProfile;
-import com.example.sandbox.hibernatespringboot.model.common.MainProfile;
+import com.example.sandbox.hibernatespringboot.model.CommProfile;
+import com.example.sandbox.hibernatespringboot.model.MainProfile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

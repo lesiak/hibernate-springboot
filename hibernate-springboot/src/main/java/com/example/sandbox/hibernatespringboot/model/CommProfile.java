@@ -1,4 +1,4 @@
-package com.example.sandbox.hibernatespringboot.model.common;
+package com.example.sandbox.hibernatespringboot.model;
 
 import javax.persistence.*;
 import java.io.Serializable;

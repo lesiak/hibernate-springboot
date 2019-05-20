@@ -1,6 +1,6 @@
 package com.example.sandbox.hibernatespringboot.model.converters;
 
-import com.example.sandbox.hibernatespringboot.model.common.HasCustomName;
+import com.example.sandbox.hibernatespringboot.model.HasCustomName;
 
 import javax.persistence.AttributeConverter;
 

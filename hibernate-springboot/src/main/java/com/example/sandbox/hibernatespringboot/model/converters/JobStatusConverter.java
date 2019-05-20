@@ -1,6 +1,6 @@
 package com.example.sandbox.hibernatespringboot.model.converters;
 
-import com.example.sandbox.hibernatespringboot.model.common.JobStatus;
+import com.example.sandbox.hibernatespringboot.model.JobStatus;
 
 import javax.persistence.Converter;
 

@@ -1,4 +1,4 @@
-package com.example.sandbox.hibernatespringboot.model.common.mapsid;
+package com.example.sandbox.hibernatespringboot.model.mapsid;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,6 +1,6 @@
 package com.example.sandbox.hibernatespringboot.repo;
 
-import com.example.sandbox.hibernatespringboot.model.common.CommodityPrice;
+import com.example.sandbox.hibernatespringboot.model.CommodityPrice;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
