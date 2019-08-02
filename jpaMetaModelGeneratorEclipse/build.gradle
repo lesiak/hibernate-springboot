@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.4.RELEASE'
+	id 'java'
+	id "net.ltgt.apt-eclipse" version "0.18"	
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	compileOnly 'org.projectlombok:lombok:1.16.18'
+	runtimeOnly 'com.h2database:h2'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	annotationProcessor(
+			"javax.xml.bind:jaxb-api",
+			"org.projectlombok:lombok",
+			"org.hibernate:hibernate-jpamodelgen"
+	)
+
+}
+/*
+compileJava {
+	def relativePath = "out/production/classes/generated"
+	sourceSets.main.java {
+		srcDir(relativePath)
+	}
+	def generatedSourceDir = project.file(relativePath)
+	options.annotationProcessorGeneratedSourcesDirectory = generatedSourceDir
+}
+*/
