@@ -52,3 +52,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
     testRuntime 'com.h2database:h2'
 }
+
+test {
+    useJUnitPlatform()
+}
+
