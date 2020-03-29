@@ -4,6 +4,9 @@ public class Pair<First, Second> {
     private First first;
     private Second second;
 
+    public Pair() {
+    }
+
     public Pair(First first, Second second) {
         this.first = first;
         this.second = second;

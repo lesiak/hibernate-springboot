@@ -18,6 +18,9 @@ public class PojoNPlusOneTest {
     private SimpleEntityRepository simpleEntityRepository;
 
     @Autowired
+    private SimpleEntityService simpleEntityService;
+
+    @Autowired
     private EntityManager entityManager;
 
     @BeforeEach
@@ -29,7 +32,12 @@ public class PojoNPlusOneTest {
 
     @Test
     public void testFindAll() {
-        simpleEntityRepository.findAll();
+        var all = simpleEntityRepository.findAll();
+    }
+
+    @Test
+    public void testChangeValue() {
+       simpleEntityService.changeValueInFirstEntity();
     }
 
     @Test
@@ -38,11 +46,27 @@ public class PojoNPlusOneTest {
     }
 
     @Test
-    public void aaa() {
-        List<Pair<SimpleEntity, Boolean>> postDTOs = entityManager.createQuery(
-    "select m as first, false as second from SimpleEntity m")
+    public void testChangeValueInRecord() {
+        simpleEntityService.changeValueInFirstRecord();
+    }
+
+    @Test
+    public void testGetRecordsExtended() {
+        simpleEntityRepository.getRecordsExtended();
+    }
+
+    @Test
+    public void testGetRecordsViaResultTransformer() {
+        List<Pair<SimpleEntity, Boolean>> resultList = entityManager.createQuery(
+                "select m as first, false as second from SimpleEntity m")
                 .unwrap(org.hibernate.query.Query.class)
                 .setResultTransformer(Transformers.aliasToBean(Pair.class))
                 .getResultList();
+        System.out.println(resultList);
+    }
+
+    @Test
+    public void changeValueInFirstTransformer() {
+        simpleEntityService.changeValueInFirstEntityViaTransformer();
     }
 }
