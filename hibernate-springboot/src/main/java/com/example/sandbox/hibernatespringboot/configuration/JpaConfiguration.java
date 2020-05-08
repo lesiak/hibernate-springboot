@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.PropertySources;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
@@ -27,7 +26,6 @@ import javax.sql.DataSource;
         @PropertySource(value = "classpath:application-db.properties"),
         @PropertySource(value = "file:./application-db.properties", ignoreResourceNotFound = true)
 })
-@EnableTransactionManagement
 public class JpaConfiguration {
 
     // use hibernate to format queries
