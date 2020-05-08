@@ -11,9 +11,12 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.inject.Named;
 import javax.sql.DataSource;
 
 @Configuration
@@ -24,6 +27,7 @@ import javax.sql.DataSource;
         @PropertySource(value = "classpath:application-db.properties"),
         @PropertySource(value = "file:./application-db.properties", ignoreResourceNotFound = true)
 })
+@EnableTransactionManagement
 public class JpaConfiguration {
 
     // use hibernate to format queries
@@ -35,7 +39,6 @@ public class JpaConfiguration {
             return this.formatter.format(query);
         }
     }
-
 
     private DataSource wrapWithLoggingProxy(DataSource actualDataSource) {
         // use pretty formatted query with multiline enabled
